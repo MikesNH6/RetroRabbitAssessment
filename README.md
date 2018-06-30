@@ -4,7 +4,7 @@ The solution can be run by downloading the file and opening the CodingChallenge.
 
 Inside the project there will be a folder called Resources, this is where the text document is stored to make any changes. 
 
-The solution can be run by looking in the projects and release folder and clicking on the executable, or can be run through visual studio.
+The solution can be run through visual studio.
 
 The solution does a lot of validation on start up. Checks that everything is correct as per the requirements and also removes any special characters from text document. 
 
