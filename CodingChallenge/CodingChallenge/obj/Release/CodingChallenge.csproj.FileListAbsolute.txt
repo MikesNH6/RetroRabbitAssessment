@@ -1,0 +1,10 @@
+C:\Users\michael.harris\Documents\Visual Studio 2017\Projects\CodingChallenge\CodingChallenge\bin\Release\CodingChallenge.exe.config
+C:\Users\michael.harris\Documents\Visual Studio 2017\Projects\CodingChallenge\CodingChallenge\bin\Release\CodingChallenge.exe
+C:\Users\michael.harris\Documents\Visual Studio 2017\Projects\CodingChallenge\CodingChallenge\bin\Release\CodingChallenge.pdb
+C:\Users\michael.harris\Documents\Visual Studio 2017\Projects\CodingChallenge\CodingChallenge\obj\Release\CodingChallenge.csprojResolveAssemblyReference.cache
+C:\Users\michael.harris\Documents\Visual Studio 2017\Projects\CodingChallenge\CodingChallenge\obj\Release\CodingChallenge.CodingCallengeForm.resources
+C:\Users\michael.harris\Documents\Visual Studio 2017\Projects\CodingChallenge\CodingChallenge\obj\Release\CodingChallenge.Properties.Resources.resources
+C:\Users\michael.harris\Documents\Visual Studio 2017\Projects\CodingChallenge\CodingChallenge\obj\Release\CodingChallenge.csproj.GenerateResource.Cache
+C:\Users\michael.harris\Documents\Visual Studio 2017\Projects\CodingChallenge\CodingChallenge\obj\Release\CodingChallenge.csproj.CoreCompileInputs.cache
+C:\Users\michael.harris\Documents\Visual Studio 2017\Projects\CodingChallenge\CodingChallenge\obj\Release\CodingChallenge.exe
+C:\Users\michael.harris\Documents\Visual Studio 2017\Projects\CodingChallenge\CodingChallenge\obj\Release\CodingChallenge.pdb
