@@ -29,45 +29,62 @@ namespace CodingChallenge
             string foundWords = "";
             MatchCount.Text = "0";
             List<string> foundList = new List<string>();
-
-            //Way too complex there must be an easier way...
-            foreach (var word in list)
+            
+            if(searchLetters.Length == 5)
             {
-                char[] letters = word.ToCharArray();
-
-                for (int i = 0; i < word.Length; i++)
+                //Way too complex there must be an easier way...
+                foreach (var word in list)
                 {
-                    for (int a = 0; a < searchLetters.Length; a++)
+                    char[] letters = word.ToCharArray();
+
+                    for (int i = 0; i < word.Length; i++)
                     {
-                        if (letters[i] == searchLetters[a])
+                        for (int a = 0; a < searchLetters.Length; a++)
                         {
-                            foundWords += letters[i].ToString(); //builds the word by trying to match each character in the list
+                            if (letters[i] == searchLetters[a])
+                            {
+                                foundWords += letters[i].ToString(); //builds the word by trying to match each character in the list
+                            }
                         }
+                    }
+
+                    //Had a bug where it wasn't returning the correct word. Now checks to see if the word exists first
+                    if (foundWords.Length == 5 && foundWords.Contains(word)) 
+                    {
+                        foundList.Add(foundWords);
+                        foundWords = "";
+                    }
+                    else
+                    {
+                        foundWords = "";
+                        ResultsDisplayBox.Text = "Cannot find any equivalent strings...";
                     }
                 }
 
-                //Had a bug where it wasn't returning the correct word. Now checks to see if the word exists first
-                if (foundWords.Length == 5 && foundWords.Contains(word)) 
+                //Purely set this way to get the right feedback from the results box
+                if (SearchBox.Text != "" && foundList.Count > 0) 
                 {
-                    foundList.Add(foundWords);
-                    foundWords = "";
-                }
-                else
-                {
-                    foundWords = "";
-                    ResultsDisplayBox.Text = "Cannot find any equivalent strings...";
+                    ResultsDisplayBox.Text = "";
+                    foreach (var item in foundList)
+                    {
+                        ResultsDisplayBox.Text += item + "\r\n";
+                    }
+                    MatchCount.Text = foundList.Count.ToString();
                 }
             }
-
-            //Purely set this way to get the right feedback from the results box
-            if (SearchBox.Text != "" && foundList.Count > 0) 
+            else
             {
-                ResultsDisplayBox.Text = "";
-                foreach (var item in foundList)
+                string message = "";
+                switch (SearchBox.Text.Length)
                 {
-                    ResultsDisplayBox.Text += item + "\r\n";
+                    case 0: message = "Please type in a 5 letter string.";
+                        break;
+                    case 4: message = "Almost there! 1 more character.";
+                        break;
+                    default: message = String.Format("Please type in {0} more characters", (5 - SearchBox.Text.Length));
+                        break;
                 }
-                MatchCount.Text = foundList.Count.ToString();
+                ResultsDisplayBox.Text = message;
             }
         }
 
