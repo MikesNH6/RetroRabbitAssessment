@@ -2,6 +2,8 @@
 
 The solution can be run by downloading the file and opening the CodingChallenge.sln file. This should open in visual studio. 
 
+The project might need to be copied to your visual studio folder in order to build and run the application.
+
 Inside the project there will be a folder called Resources, this is where the text document is stored to make any changes. 
 
 The solution can be run through visual studio.
